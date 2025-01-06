@@ -1,0 +1,2 @@
+# edukate
+School Management System
