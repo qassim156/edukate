@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukate</title>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="left">
+        <div class="logo-container align-center justify-center">
+            <img src="./imgs/num_svg/School-Logo.svg" alt=""/>
+            <span class="hidden">Edukate</span>
+        </div>
+        <div id="menu">
+            <span id="left-menu-label" class="hidden menu-label">MENU</span>
+            <ul id="left-menu-list">
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Techers</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Parents</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Classes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Lesson</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Exams</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/Home.svg"/>
+                        <span class="hidden">Assignments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/public.svg"/>
+                        <span class="hidden">Attendance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/public.svg"/>
+                        <span class="hidden">Events</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/public.svg"/>
+                        <span class="hidden">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/public.svg"/>
+                        <span class="hidden">Announcements</span>
+                    </a>
+                </li>
+            </ul>
+            <span id="menu-label" class="hidden menu-label">OTHERS</span>
+            <ul id="menu-list-2">
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/public.svg"/>
+                        <span class="hidden">Profile</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/num_svg/setting.svg"/>
+                        <span class="hidden">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="" src="./imgs/num_svg/signout.svg"/>
+                        <span class="hidden">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    
+    <div id="right">
+        <div class="navbar">
+            <div class="searchbar hidden">
+                <img src="./imgs/Search.svg">
+                <input type="text" name="search" placeholder="Search...">
+            </div>
+            <div class="user-div">
+                <a href="">
+                    <img src="./imgs/mail.svg" alt="">
+                </a>
+                <a href="">
+                    <img src="./imgs/notifications.svg" alt="">
+                </a>
+                <div class="user">
+                    <h4>John smilga</h4>
+                    <p>Admin</p>
+                </div>
+                <div class="user-img">
+                    <img src="./imgs/num_svg/dashboard-1.svg" />
+                </div>
+            </div>
+        </div>
+        <h1>
+            Dashboard
+        </h1>
+        <div id="content-div-1">
+            <div id="right-left" class="right-left">
+                <div id="card-div">
+                    <div id="card-1" class="total-cards">
+                        <div><p>Total Students:</p>
+                            <p id="total-students" class="total-datas">600</p>
+                        </div>
+                        <a href="students/index.html">
+                            <!-- <img src="" width="10px"> -->
+                        </a>
+                    </div>
+                    <div id="card-2" class="total-cards">
+                        <div><p>Total Teachers:</p>
+                            <p id="total-students" class="total-datas">30</p>
+                        </div>
+                        <a href="students/index.html">
+                            <!-- <img src="" width="10px"> -->
+                        </a>
+                    </div>
+                    <div id="card-3" class="total-cards">
+                        <div><p>Total Parents:</p>
+                            <p id="total-students" class="total-datas">60</p>
+                        </div>
+                        <a href="students/index.html">
+                            <!-- <img src="" width="10px"> -->
+                        </a>
+                    </div>  
+                </div>
+                <div id="charts" class="charts">
+                    <div id="students-chart">
+                        <p>Students</p>
+                        <div id="chart-stu"></div>
+                    </div>
+                    <div id="attendance-chart">
+                        <p>Attendance</p>
+                        <div id="chart-stu"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="right-right" class="right-right">
+                e
+            </div>
+        </div>
+    </div>
+
+</body>
+ </html>
