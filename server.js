@@ -7,6 +7,7 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 import express from 'express';  
 import cors from 'cors';
 import dotenv from 'dotenv';
+///qassim
 
 //importing route
 import homeRoute from './routes/home.js'
