@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Edukate</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="script.js" type="module"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="all">
+           <div class="right">
+                <div class="form-con">
+                    <form class="signup-form" id="signup-form"  method="post">
+                      <div class="brand">
+                        <h3 class="brand-name">Edukate</h3>
+                      </div>  
+                      <div class="div-input-form">
+                        <p>Enter Login details</p>
+                        
+                        <label for="userid">Enter your UserID:</label>
+                        <input name="userid" id="userid" class="inputs" autocomplete="off" type="text" placeholder="UserID..."/>
+                        
+                        
+                        <label for="password">Password:</label>
+                        <input name="password" id="password" placeholder="*******" class="inputs" type="password"/>
+                        
+                        <div class="signup-link">
+                          <p><a href="">Forgot Password</a></p>
+                      </div>
+                        <a href="../admin/index.html"> 
+
+                        <button id="submit-btn" type="submit">Login</button></a> 
+                      </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
