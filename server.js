@@ -15,8 +15,6 @@ import cssRoute from './routes/css.js'
 // import studentRoute from './routes/student.js'
 // import teacherRoute from './routes/teacher.js'
 import { readFileSync } from 'fs'; 
- 
-dotenv.config();
 
 
 const app = express();
@@ -31,7 +29,7 @@ app.use('/css', cssRoute);
 app.use('/', homeRoute);
 
 
-    app.listen(process.env.PORT, () => {
+    app.listen(3000, () => {
         console.log('Server is running on port 3000');
     });
  
