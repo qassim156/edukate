@@ -13,12 +13,14 @@ import adminCollection from './models/admin.js';
 import studentCollection from './models/student.js';
 import teacherCollection from './models/teachers.js';
 import dataCollection from './models/data.js';
+import userRoute from './routes/user.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.static('./app'));
 // app.use(cors());        
+app.use('/auth', userRoute);
 
 
     app.listen(3000, () => {

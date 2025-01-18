@@ -3,20 +3,18 @@ var submitBtn = document.getElementById("submit-btn");
    
 
 const getDatas = () =>{
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
+    const userid = document.getElementById('userid').value;
     const password = document.getElementById('password').value; 
-    console.log({username, email, password});   
-    return {username, email, password};
+    console.log({userid, password});   
+    return {userid, password};
 }
 const postData = async() => {  
-    const {username, email, password} = getDatas();   
-    console.log(username) 
+    const {userid, password} = getDatas();   
+    console.log(userid) 
     await axios.post(
             '/auth/signup', 
             {
-                username,  
-                email, 
+                userid, 
                 password,
             }
         ).then(response => {
@@ -26,12 +24,11 @@ const postData = async() => {
 
 function handleSubmit(e){
     e.preventDefault();
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('userid').value;
 };
 
 function submitForm(event) {
     event.preventDefault();
-//   console.log("Form submitted");
     postData();
     getDatas();
 
