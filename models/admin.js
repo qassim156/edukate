@@ -8,12 +8,7 @@ import mongoose from 'mongoose';
         console.log('Failed to connect')
     });
     const LoginSchema = new mongoose.Schema({
-        username:{
-            type: String,
-            required: true,
-            unique:true,
-        },
-        email:{
+        userid:{
             type: String,
             required: true,
             unique:true,
@@ -23,5 +18,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const adminCollections = mongoose.model("adminCollection", LoginSchema);
-    export default adminCollections;
+    const adminCollection = mongoose.model("adminCollection", LoginSchema);
+    export default adminCollection;

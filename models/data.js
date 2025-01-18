@@ -23,5 +23,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const adminCollections = mongoose.model("adminCollections", LoginSchema);
+    const adminCollections = mongoose.model("data", LoginSchema);
     export default adminCollections;

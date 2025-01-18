@@ -9,13 +9,16 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 ///qassim
 
-import adminCollections from './models/admin.js';
+import adminCollection from './models/admin.js';
+import studentCollection from './models/student.js';
+import teacherCollection from './models/teachers.js';
+import dataCollection from './models/data.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.static('./app'));
-// app.use(cors());
+// app.use(cors());        
 
 
     app.listen(3000, () => {

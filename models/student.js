@@ -11,7 +11,7 @@ import mongoose from 'mongoose';
         username:{
             type: String,
             required: true,
-            unique:true,
+            unique:true,  
         },
         email:{
             type: String,
