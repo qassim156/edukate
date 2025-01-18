@@ -9,25 +9,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 ///qassim
 
-//importing route
-import homeRoute from './routes/home.js'
-import adminRoute from './routes/admin.js'
-import cssRoute from './routes/css.js' 
-// import studentRoute from './routes/student.js'
-// import teacherRoute from './routes/teacher.js'
-import { readFileSync } from 'fs'; 
-
-
 const app = express();
 
 app.use(express.json());
-// app.use(express.static('../app/home'));
+app.use(express.static('./app'));
 // app.use(cors());
-app.use('/admin', adminRoute);
-app.use('/css', cssRoute);
-// app.use('/teacher', teacherRoute);
-// app.use('/student', studentRoute); 
-app.use('/', homeRoute);
 
 
     app.listen(3000, () => {
