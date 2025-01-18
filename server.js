@@ -9,7 +9,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 ///qassim
 
-import collection from './models/admin.js';
+import adminCollections from './models/admin.js';
 
 const app = express();
 

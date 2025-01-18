@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
     mongoose.connect(
         'mongodb://127.0.0.1:27017/edukate'
     ).then(()=>{
-        console.log('DB Connected');
+        console.log('Admin database connected');
     }).catch(() => {
         console.log('Failed to connect')
     });
@@ -23,5 +23,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const collection = mongoose.model("adminCollections", LoginSchema);
-    export default collection;
+    const adminCollections = mongoose.model("adminCollection", LoginSchema);
+    export default adminCollections;
