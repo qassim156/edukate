@@ -18,5 +18,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const adminCollection = mongoose.model("adminCollections", LoginSchema);
+    const adminCollection = mongoose.model("adminCollection", LoginSchema);
     export default adminCollection;

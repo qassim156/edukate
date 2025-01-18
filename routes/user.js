@@ -22,6 +22,20 @@ router.post('/signup', async(req,res) => {
         //      };        
         //     await collection.insertMany([data]);
         // }
+        console.log
+
+        if(req.body.userid === 'admin'){
+            
+            const data = {
+                userid : req.body.username,  
+                password : req.body.password
+             };        
+            await adminCollection.insertMany([data]);
+
+            console.log("user is present");
+        }else{
+            
+        }
     res.send("done");
     }catch{
 
