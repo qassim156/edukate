@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
     mongoose.connect(
-        'mongodb://127.0.0.1:27017/LoginSignUpTutorial'
+        'mongodb://127.0.0.1:27017/edukate'
     ).then(()=>{
         console.log('DB Connected');
     }).catch(() => {
@@ -23,5 +23,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const collection = mongoose.model("userCollections", LoginSchema);
+    const collection = mongoose.model("adminCollections", LoginSchema);
     export default collection;
