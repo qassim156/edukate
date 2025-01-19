@@ -8,19 +8,21 @@ import userCollection from '../models/admin.js';
 const router = express.Router();
 
 router.post('/signup', async(req,res) => {
-
-        console.log
-
-        if(req.body.userid === 'admin' && req.body.password === 'admin'){
-            
-          
-
-            console.log("user is present");
-        }else{
+    const data = await adminCollection.find();
+    console.log(data)    
+        if(req.body.userid === 'admin'){  
+            if(req.body.password === 'admin'){  
+                console.log("user is present");
+            }
+        }else if(req.body.userid === '2007171' ){
+            console.log(userid);
+            // const data = await adminCollection.find();
+            // const data = await adminCollection.findOne({userid : req.body.userid});
+        }else {
             const data = {
-                userid : req.body.username,  
+                userid : req.body.userid,  
                 password : req.body.password
-             };        
+             };         
             await adminCollection.insertMany([data]);
         }
     res.send("done");

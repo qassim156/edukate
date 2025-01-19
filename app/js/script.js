@@ -9,6 +9,8 @@ const getDatas = () =>{
     return {userid, password};
 }
 const postData = async() => {  
+    document.getElementById('userid').value = '';
+    document.getElementById('password').value = '';
     const {userid, password} = getDatas();   
     console.log(userid) 
     await axios.post(
