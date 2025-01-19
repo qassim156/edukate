@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
     }).catch(() => {
         console.log('Failed to connect')
     });
+    
     const LoginSchema = new mongoose.Schema({
         userid:{
             type: String,

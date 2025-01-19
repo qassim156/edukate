@@ -9,10 +9,10 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 ///qassim
 
-import adminCollection from './models/admin.js';
-import studentCollection from './models/student.js';
-import teacherCollection from './models/teachers.js';
-import dataCollection from './models/data.js';
+// import adminCollection from './models/admin.js';
+// import studentCollection from './models/student.js';
+// import teacherCollection from './models/teachers.js';
+// import dataCollection from './models/data.js';
 import userRoute from './routes/user.js';
 
 const app = express();
