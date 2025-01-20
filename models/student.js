@@ -23,5 +23,7 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
+
+    
     const studentCollection = mongoose.model("studentCollection", LoginSchema);
     export default studentCollection;

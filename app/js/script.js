@@ -5,16 +5,14 @@ var submitBtn = document.getElementById("submit-btn");
 const getDatas = () =>{
     const userid = document.getElementById('userid').value;
     const password = document.getElementById('password').value; 
-    console.log({userid, password});   
+    // console.log({userid, password});   
     return {userid, password};
 }
 const postData = async() => {  
-    document.getElementById('userid').value = '';
-    document.getElementById('password').value = '';
     const {userid, password} = getDatas();   
     console.log(userid) 
     await axios.post(
-            '/auth/signup', 
+            '/auth/login', 
             {
                 userid, 
                 password,
@@ -22,11 +20,12 @@ const postData = async() => {
         ).then(response => {
             console.log(response.data.data);
         }).catch(err => console.log(err));
+
 }
 
 function handleSubmit(e){
     e.preventDefault();
-    const username = document.getElementById('userid').value;
+    const userid = document.getElementById('userid').value;
 };
 
 function submitForm(event) {
@@ -38,5 +37,3 @@ function submitForm(event) {
 
 form.addEventListener('submit', submitForm);
 submitBtn.addEventListener('click', submitForm);
-
-      

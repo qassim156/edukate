@@ -23,5 +23,6 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
+    
     const collection = mongoose.model("userCollections", LoginSchema);
     export default collection;

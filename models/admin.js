@@ -25,7 +25,7 @@ import mongoose from 'mongoose';
             type: String,
         },
         age:{
-            type: Number,
+            type: Number, 
         },
         adminType:{
             type: String,
