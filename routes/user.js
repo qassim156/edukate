@@ -7,6 +7,17 @@ import userCollection from '../models/admin.js';
 // Router
 const router = express.Router();
 
+const checkUserRole = (userid) => {
+
+    if(userid === 'admin'){
+        return 0;
+    }else if(Number(userid.substr(0, 7)) === 2007171){
+        return  1;
+    }else{
+        return 2;
+    }
+}
+
 router.post('/signup', async(req,res) => {
     const data = await adminCollection.find();
     console.log(data)    
