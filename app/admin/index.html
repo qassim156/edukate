@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://kit.fontawesome.com/7e474f45d2.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="page-content index-page">
@@ -112,9 +113,9 @@
               <h1>Dashboard</h1>
             </div>
             <div class="main-content-boxes">
-              <img src="./images/student-on-aptop-screen.svg"/>
+              <!-- <img src="./images/student-on-aptop-screen.svg"/> -->
 
-              <div class="box first-box welcome-box">
+              <!-- <div class="box first-box welcome-box">
 
                 <div class="box-section1">
                   <div class="box-title">
@@ -123,6 +124,46 @@
                   </div>
                 </div>
                   
+              </div> -->
+
+              <div class="box second-box chart-boxes">
+                <div class="population">
+                  <div class="total-students">
+                    <p>Total Students</p>
+                    <h1>274</h1>
+                    <a href="students.html">
+                      <button>Students</button>
+                    </a>
+                  </div>
+                  <div class="total-teachers">
+                    <p>Total Teachers</p>
+                    <h1>274</h1>
+                    <a href="students.html">
+                      <button>Teachers</button>
+                    </a>
+                  </div>
+                </div>  
+              </div>
+              <div class="box third-box chart-boxes">
+                <div class="chart-box-1">
+                  <div>
+                    <canvas id="myChart"></canvas>
+                  </div>                
+                  </div>
+                  <div class="chart-box-2">
+                    <div>
+                      <canvas id="myChart-1"></canvas>
+                    </div>                
+                    </div>
+                    
+                </div>  
+              </div>
+              <div class="box fourth-box chart-boxes">
+                  <div class="chart-box-2">
+                    <div>
+                      <canvas id="myChart-1"></canvas>
+                    </div>                
+                    </div>  
               </div>
                 
             </div>

@@ -130,7 +130,6 @@ a {
   left: 0;
   cursor: pointer;
 }
-
 .sidebar .brand::before {
   content: "";
   position: absolute;
@@ -398,11 +397,12 @@ main .main-contents .title::after {
   .main-content-boxes{
     width: 100%;
     display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
   }
   .main-content-boxes .box.first-box{
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
     background-color: #88c0ffb9;
     height: 200px;
   }
@@ -442,4 +442,17 @@ main .main-contents .title::after {
     background: transparent;
     /* background-color: #a9d1ffcb; */
   }
- 
+  .main-content-boxes .box.second-box{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+  }
+  .main-content-boxes .box.third-box{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+  }
