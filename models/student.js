@@ -7,13 +7,8 @@ import mongoose from 'mongoose';
     }).catch(() => {
         console.log('Failed to connect')
     });
-    const LoginSchema = new mongoose.Schema({
-        username:{
-            type: String,
-            required: true,
-            unique:true,  
-        },
-        email:{
+    const studentSchema = new mongoose.Schema({
+        userid:{
             type: String,
             required: true,
             unique:true,
@@ -21,9 +16,39 @@ import mongoose from 'mongoose';
         password:{
             type: String,
             required: true,
+        },
+        firstname:{
+            type: String,
+        },
+        lastname:{
+            type: String,
+        },
+        age:{
+            type: Number, 
+        },
+        studentClass:{
+            type: String,
+        },
+        imgPath:{
+            type: String,
+        },
+        totalCourses:{
+            type: String,
+        },
+        deaprtment:{
+            type: String,
+        },
+        currentYear:{
+            type: Number, 
+        },
+        score:{
+            type: String,
+        },
+        g:{
+            type: String,
         }
     });
 
     
-    const studentCollection = mongoose.model("studentCollection", LoginSchema);
+    const studentCollection = mongoose.model("studentCollection", studentSchema);
     export default studentCollection;
