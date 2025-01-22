@@ -19,10 +19,22 @@ import userRoute from './routes/user.js';
 const app = express();
 
 app.use(express.json());
-app.use(express.static('./app'));
-// app.use(cors());        
+
+app.use(cors());
 app.use('/auth', userRoute);
 
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, "./app/index.html"));
+});
+app.post('/', function (req, res) {
+    res.redirect("/admin");
+});
+app.get('/admin', function (req, res) {
+    res.sendFile(path.join(__dirname, "./app/admin/html/index.html"));
+   
+});
+app.use(express.static('./app'));
 
     app.listen(3000, () => {
         console.log('Server is running on port 3000');

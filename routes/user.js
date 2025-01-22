@@ -1,14 +1,18 @@
 // Importing Express
 import express from 'express';
+//importing jwt
+import jwt from 'jsonwebtoken';
+import cookieParser from 'cookie-parser'
 // Model
 import adminCollection from '../models/admin.js';
 import studentCollection from '../models/student.js';
 import teacherCollection from '../models/teachers.js';
 import userCollection from '../models/admin.js';
 
+const app = express();
 // Router
 const router = express.Router();
-
+app.use(cookieParser());
 const checkUserRole = (userid) => {
 
     if(userid === 'admin'){
@@ -33,6 +37,15 @@ router.post('/login', async(req,res) => {
                 console.log("user is admin");
                 const data = await adminCollection.findOne({userid : req.body.userid});
 
+                const token = jwt.sign({userid: data.userid,
+                                        name: data.password
+                }, 'qmcode', { expiresIn: "4h"});
+
+        res.cookie('token', token, {
+            httpOnly: true
+        })
+        res.redirect("/admin");
+
             }
         }else if(userRole == 1){
 
@@ -55,7 +68,7 @@ router.post('/login', async(req,res) => {
 
             await adminCollection.insertMany([data]);
         }
-    res.send("done");
+
 });
 
 
