@@ -27,8 +27,8 @@ app.use('/auth', userRoute);
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "./app/index.html"));
 });
-app.post('/', function (req, res) {
-    res.redirect("/admin");
+app.post('/action.js', function (req, res) {
+    res.redirect("/admin"); 
 });
 app.get('/admin', function (req, res) {
     res.sendFile(path.join(__dirname, "./app/admin/html/index.html"));

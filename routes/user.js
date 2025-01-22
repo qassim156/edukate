@@ -17,9 +17,9 @@ const checkUserRole = (userid) => {
 
     if(userid === 'admin'){
         return 0;
-    }else if(userid.substr(0, 2) === 'TD'){
+    }else if((userid.substring(0, 2)) == 'TD'){
         return  1;
-    }else if(userid.substr(0, 2) === 'ED'){ 
+    }else if(userid.substring(0, 2) === 'ED'){ 
         return  2;
     }else{
         return 3;

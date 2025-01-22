@@ -24,12 +24,12 @@ const postData = async() => {
 }
 
 function handleSubmit(e){
-    e.preventDefault();
+    // e.preventDefault();
     const userid = document.getElementById('userid').value;
 };
 
 function submitForm(event) {
-    event.preventDefault();
+    // event.preventDefault();
     postData();
     getDatas();
 
