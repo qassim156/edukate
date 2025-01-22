@@ -14,15 +14,19 @@ const app = express();
 const router = express.Router();
 app.use(cookieParser());
 const checkUserRole = (userid) => {
-
-    if(userid === 'admin'){
+    console.log(userid);
+    try{
+        if(userid === 'admin'){
         return 0;
-    }else if((userid.substring(0, 2)) == 'TD'){
+    }else if((userid.substring(0, 2)) === 'TD'){
         return  1;
     }else if(userid.substring(0, 2) === 'ED'){ 
         return  2;
     }else{
         return 3;
+    } 
+    }catch{
+        
     }
 }
 
@@ -30,7 +34,7 @@ router.post('/login', async(req,res) => {
         const data = await adminCollection.find();
        
         const userRole = checkUserRole(req.body.userid);
-       
+       try{
         if(userRole == 0){  
             if(req.body.password === 'admin'){  
                 
@@ -67,7 +71,12 @@ router.post('/login', async(req,res) => {
              };
 
             await adminCollection.insertMany([data]);
-        }
+        
+       }
+    }catch{
+
+       }
+        
 
 });
 
