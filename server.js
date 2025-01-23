@@ -15,26 +15,23 @@ import dotenv from 'dotenv';
 // import dataCollection from './models/data.js';
 
 import userRoute from './routes/user.js';
+import adminRoute from './routes/admin.js';
+import teacherRoute from './routes/teacher.js';
+import studentRoute from './routes/student.js';
+import login from './routes/login.js';
 
 const app = express();
 
 app.use(express.json());
 
 app.use(cors());
-app.use('/auth', userRoute);
-
-
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, "./app/index.html"));
-});
-app.post('/action.js', function (req, res) {
-    res.redirect("/admin"); 
-});
-app.get('/admin', function (req, res) {
-    res.sendFile(path.join(__dirname, "./app/admin/html/index.html"));
-   
-});
 app.use(express.static('./app'));
+app.use('/admin', adminRoute);
+app.use('/teacher', teacherRoute);
+app.use('/student', studentRoute);
+app.use('/', login)
+
+
 
     app.listen(3000, () => {
         console.log('Server is running on port 3000');

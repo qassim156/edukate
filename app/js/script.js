@@ -8,20 +8,20 @@ const getDatas = () =>{
     // console.log({userid, password});   
     return {userid, password};
 }
-const postData = async() => {  
-    const {userid, password} = getDatas();   
-    console.log(userid) 
-    await axios.post(
-            '/auth/login', 
-            {
-                userid, 
-                password,
-            }
-        ).then(response => {
-            console.log(response.data.data);
-        }).catch(err => console.log(err));
+// const postData = async() => {  
+//     const {userid, password} = getDatas();   
+//     console.log(userid) 
+//     await axios.post(
+//             '/login', 
+//             {
+//                 userid, 
+//                 password,
+//             }
+//         ).then(response => {
+//             console.log(response.data);
+//         }).catch(err => console.log(err));
 
-}
+// }
 
 function handleSubmit(e){
     // e.preventDefault();
@@ -30,10 +30,10 @@ function handleSubmit(e){
 
 function submitForm(event) {
     // event.preventDefault();
-    postData();
-    getDatas();
+    // postData();
+    // getDatas();
 
 }
 
 form.addEventListener('submit', submitForm);
-submitBtn.addEventListener('click', submitForm);
+// submitBtn.addEventListener('click', submitForm);
