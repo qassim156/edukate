@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/7e474f45d2.js" crossorigin="anonymous"></script>
+    <title>My Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- <div class="overlay-1">
+    </div> -->
+    <div class="page-content">
+      <div class="sidebar">
+        <div class="brand"> 
+          <i class="fa-solid fa-xmark xmark"></i> `
+          <h3 class="brand-name">Edukate</h3>
+        </div>
+        <ul>
+          <li>
+            <a href="/admin" class="sidebar-link">
+              <i class="fa-solid fa-house"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="/admin/classes.html" class="sidebar-link">
+              <i class="fa-solid fa-chalkboard"></i>
+              <span>Classes</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/admin/courses.html" class="sidebar-link">
+              <i class="fa-solid fa-folder-open"></i>
+              <span>Courses / Subjects</span>
+            </a>
+          </li>
+          
+                    <li>
+                      <a href="/admin/students.html" class="sidebar-link">
+                        <i class="fa-solid fa-users-line"></i>
+                        <span>Students</span>
+                      </a>
+                    </li>
+          
+                    <li>
+                      <a href="/admin/teachers.html" class="sidebar-link">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Teachers</span>
+                      </a>
+                    </li>
+          <!-- <li>
+            <a href="/index.html" class="sidebar-link">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Message</span>
+            </a>
+          </li> -->
+          <li>
+            <a href="/admin/notifications.html" class="sidebar-link">
+              <i class="fa-solid fa-bell"></i>
+              <span>Notification</span>
+            </a>
+          </li>
+          <li>
+            <a href="/admin/examination.html" class="sidebar-link">
+              <i class="fa-solid fa-marker"></i>
+              <span>Examination</span>
+              </a>
+          </li>
+          <li>
+            <a href="/admin/profile.html">
+              <i class="fa-solid fa-address-card"></i>
+                <span>Profile</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="/admin/setting.html">
+              <i class="fa-solid fa-toolbox"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="/admin">
+              <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+        </ul>
+      </div>
+      <main>
+          <div class="header">
+            <i class="fa-solid fa-bars bar-item"></i>
+            <div class="title">
+              <h1>My Dashboard</h1>
+            </div> 
+            
+
+            <div class="profile">
+              <div class="user">
+                  <h4>John smilga</h4>
+                  <p>Admin</p>
+              </div>
+              <div class="user-img"><a href="profile.html">
+                <img src="./images/avatar.png" />
+              </a>
+              </div>
+          </div>
+          </div>
+          <div class="main-content">
+            
+            <div class="main-content-boxes"> 
+              <div class="box second-box population-boxes">
+                <div class="population">
+
+                  <div class="title">
+                    <h1>Total Population</h1>
+                  </div>
+
+                  <div class="total total-students">
+                        <div> <p>Total Students:</p>
+                          <a href="students.html">All Students</a></div>
+                        <div><h2>$100,009</h2>
+                          
+                        </div>
+                       
+                  </div>
+                  <div class="total total-teachers">
+                    <div> <p>Total Teacher:</p>                      <a href="teachers.html">All Teachers</a></div>
+                    <div><h2>790</h2>
+
+                    </div>
+                </div>  
+              </div>
+
+                    
+
+              </div>
+            <div class="box fifth-box chart-boxes">
+              <div class="chart-box-1">
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>                
+                </div>     
+            </div>
+            <div class=" projects-boxes">
+              <div class="box-section1">
+                <div class="box-title">
+                  <h2>New Students</h2>
+                </div>
+              </div>
+              <div class="projects-box-section2">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Full Name</td>
+                      <td>Reg. Date</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Qassim Adako Iyanuoluwa</td>
+                      <td>28 Jan 2025</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class=" projects-boxes">
+              <div class="box-section1">
+                <div class="box-title">
+                  <h2>New teachers</h2>
+                </div>
+              </div>
+              <div class="projects-box-section2">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Full Name</td>
+                      <td>Reg. Date</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Qassim Adako Iyanuoluwa</td>
+                      <td>28 Jan 2025</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+           
+          </div>
+          
+    </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

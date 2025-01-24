@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://kit.fontawesome.com/7e474f45d2.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="page-content index-page">
       <div class="sidebar">
-        <div class="brand"> 
-          <i class="fa-solid fa-xmark xmark"></i> `
+        <div class="brand">
+          <i class="fa-solid fa-xmark xmark"></i>
           <h3 class="brand-name">Edukate</h3>
         </div>
         <ul>
           <li>
-            <a href="/index.html" class="sidebar-link">
+            <a href="index.html" class="sidebar-link">
               <i class="fa-solid fa-house"></i>
               <span>Dashboard</span>
             </a>
@@ -51,13 +50,7 @@
                         <span>Teachers</span>
                       </a>
                     </li>
-          <!-- <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Message</span>
-            </a>
-          </li> -->
-          <li>
+     
             <a href="notifications.html" class="sidebar-link">
               <i class="fa-solid fa-bell"></i>
               <span>Notification</span>
@@ -100,7 +93,7 @@
             <div class="profile">
               <div class="user">
                   <h4>John smilga</h4>
-                  <p>Admin</p>
+                  <p>Student</p>
               </div>
               <div class="user-img"><a href="profile.html">
                 <img src="./images/avatar.png" />
@@ -110,113 +103,106 @@
           </div>
           <div class="main-content">
             <div class="title">
-              <h1>Dashboard</h1>
+              <h1>Settings</h1>
             </div>
+  
             <div class="main-content-boxes">
-              <!-- <img src="./images/student-on-aptop-screen.svg"/> -->
-
-              <!-- <div class="box first-box welcome-box">
-
+              <div class="box">
                 <div class="box-section1">
                   <div class="box-title">
-                    <h2>Hi, Qassim Adako</h2>
-                    <p>Welcome Back</p>
+                    <h2>General Info</h2>
+                    <p>Edit general Information About Your Account</p>
                   </div>
                 </div>
-                  
-              </div> -->
-
-              <div class="box second-box chart-boxes">
-                <div class="population">
-
-                  <div class="title">
-                    <h1>Total Population</h1>
-                  </div>
-
-                  <div class="total-students">
-                    <p>Total Students</p>
-                    <h1>274</h1>
-                    <a href="students.html">
-                      <button>Students</button>
-                    </a>
-                  </div>
-                  <div class="total-teachers">
-                    <p>Total Teachers</p>
-                    <h1>274</h1>
-                    <a href="students.html">
-                      <button>Teachers</button>
-                    </a>
-                  </div>
-                </div>  
+                <div class="general-info-section2">
+                  <form>
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="First Name" id="first-name" />
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Last Name" id="last-name" />
+                    <label for="Email">Email</label>
+                    <div class="email">
+                      <input
+                        type="email"
+                        disabled
+                        id="Email"
+                        value="zana.suleiman.44@gmail.com"
+                      />
+                      <a href="/#">Change</a>
+                    </div>
+                  </form>
+                </div>
               </div>
-
-            <div class="box fifth-box chart-boxes">
-                <div class="chart-box-1">
-                  <div>
-                    <canvas id="myChart"></canvas>
-                  </div>                
-                  </div>     
-              </div>
-
-              <div class="box sixth-box chart-boxes">
-                  <div class="chart-box-2">
-                    <div>
-                      <canvas id="myChart-1"></canvas>
-                    </div>                
-                    </div>  
-              </div>
-
-              <div class="box third-box chart-boxes">
-                <div class="new-student-list population-list">
-                  <div class="title">
-                    <h1>List of new  Students</h1>
+  
+              <div class="box">
+                <div class="box-section1">
+                  <div class="box-title">
+                    <h2>Security Info</h2>
+                    <p>Security Information About Your Account</p>
                   </div>
-                  <div class="new-item">
-                    <img src="" />
-                    <p>Mr David Bassey</p>
-                    <p>Registration Date : 20/12/24</p>
+                </div>
+                <div class="security-info-section2">
+                  <div class="person-security-info">
+                    <div class="person-info">
+                      <p style="font-weight: normal">Password</p>
+                      <span>Last Change On 25/10/2021</span>
+                    </div>
+                    <a href="/#">Change</a>
                   </div>
-                  <div class="new-item">
-                    <img src="" />
-                    <p>Mr David Bassey</p>
-                    <p>Registration Date : 20/12/24</p>
+  
+                  <div class="person-security-info">
+                    <div class="person-info">
+                      <p style="font-weight: normal">Two-Factor Authentication</p>
+                      <span>Enable/Disable The Feature</span>
+                    </div>
+                    <span class="toggle toggle1"></span>
                   </div>
-                  <div class="new-item">
-                    <img src="" />
-                    <p>Mr David Bassey</p>
-                    <p>Registration Date : 20/12/24</p>
+  
+                  <div class="person-security-info">
+                    <div class="person-info">
+                      <p style="font-weight: normal">Devices</p>
+                      <span>Check The Login Devices List</span>
+                    </div>
+                    <a href="/#">Devices</a>
                   </div>
                 </div>
               </div>
-
-              <div class="box fourth-box chart-boxes">
-                <div class="new-teacher-list population-list">
-                  <div class="title">
-                    <h1>List of new Teachers</h1>
+  
+              <div class="box">
+                <div class="box-section1">
+                  <div class="box-title">
+                    <h2>Social Info</h2>
+                    <p>Social Media Information</p>
                   </div>
-                    <div class="new-item">
-                      <img src="" />
-                      <p>Mr David Bassey</p>
-                      <p>Registration Date : 20/12/24</p>
-                    </div>
-                    <div class="new-item">
-                      <img src="" />
-                      <p>Mr David Bassey</p>
-                      <p>Registration Date : 20/12/24</p>
-                    </div>
-                    <div class="new-item">
-                      <img src="" />
-                      <p>Mr David Bassey</p>
-                      <p>Registration Date : 20/12/24</p>
-                    </div>
                 </div>
-              </div>  
-
+                <div class="social-info-section2">
+                  <form>
+                    <div class="social-info-icon">
+                      <i class="fa-brands fa-twitter"></i>
+                      <input type="text" placeholder="Twitter Username" />
+                    </div>
+                    <div class="social-info-icon">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <input type="text" placeholder="Facebook Username" />
+                    </div>
+                    <div class="social-info-icon">
+                      <i class="fa-brands fa-linkedin"></i>
+                      <input type="text" placeholder="Linkedin Username" />
+                    </div>
+                    <div class="social-info-icon">
+                      <i class="fa-brands fa-youtube"></i>
+                      <input type="text" placeholder="Youtube Username" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+                          
             </div>
+
           </div>
     </main>
     </div>
-
+    
     <script src="./js/script.js"></script>
   </body>
 </html>
