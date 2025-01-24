@@ -13,6 +13,12 @@ a {
   text-decoration: none;
   color: #000;
 }
+I{
+  color: rgb(4, 201, 1);
+}
+I:hover{
+  color: rgb(2, 94, 0);
+}
 :root {
   --white-color: #fff;
   --red-color: red;
@@ -3187,8 +3193,6 @@ main .main-contents .title::after {
     border-radius: 7px;
     justify-content: space-between;
     padding: 10px;
-    /* align-items: center; */
-    /* align-content: center; */
     min-height: 200px;
     
   }
@@ -3199,8 +3203,6 @@ main .main-contents .title::after {
     flex-flow: row;
     justify-content: space-between;
   }
-
-
 
 
   /** 
@@ -3214,7 +3216,8 @@ main .main-contents .title::after {
      border-radius: 7px;
      width: 100%;
      padding: 20px;
-  }
+
+    }
   .main-content
   .box
   .profile-skills .row ul li{
@@ -3227,6 +3230,7 @@ main .main-contents .title::after {
     justify-content: center;
     justify-items: center;
     align-content: center;
+
   }
   
   .main-content
@@ -3312,29 +3316,9 @@ main .main-contents .title::after {
   gap: var(--third-padding);
 }
 
-
-/* 
-<div class="box second-box population-boxes">
-<div class="population">
-
-  <div class="total-students">
-
-  <div class="total-teachers">
-
-<div class="box fifth-box chart-boxes">
-
-<div class="box sixth-box chart-boxes">
-<div class="box third-box new-students-div">
-<div class="new-student-list population-list">
-<div class="box fourth-box chart-boxes">
-<div class="new-teacher-list population-list"> */
-
-
 main .projects-boxes {
 
   max-width: 100%;
-  /* margin: var(--fifth-margin) var(--third-margin); */
-  /* padding: var(--secondary-padding); */
   background-color: var(--white-color);
   border-radius: var(--secondary-radius);
   -webkit-border-radius: var(--secondary-radius);
@@ -3346,7 +3330,6 @@ main .projects-boxes {
 main .projects-boxes {
 
   max-width: 100%;
-  /* margin: var(--fifth-margin) var(--third-margin); */
   padding: var(--secondary-padding);
   background-color: var(--white-color);
   border-radius: var(--secondary-radius);
@@ -3364,7 +3347,7 @@ main .projects-boxes .box-section1 .box-title{
 main .projects-boxes .box-section1 .box-title span{
   font-size: 1.2rem;
   color: var(--third-color);
-  background-color: yellow;
+  background-color: rgb(219, 219, 219);
   border-radius: 20px;
   width: 35px;
   height: 35px;
@@ -3396,8 +3379,6 @@ main .projects-boxes .projects-box-section2 table tbody tr:hover {
   background-color: var(--secondary-color);
 }
 main .projects-boxes .projects-box-section2 table tr td {
-  /* padding-left: 20px; */
-  /* margin-left: 30px; */
   border-bottom: 1px solid var(--eee-color);
   border-left: 1px solid var(--eee-color);
   padding: var(--third-padding);
@@ -3479,23 +3460,17 @@ main .projects-box .projects-box-section2 table tr td button:hover {
   border-radius: 7px;
   justify-content: space-between;
   padding: 10px;
-  /* align-items: center; */
-  /* align-content: center; */
   min-height: 200px;
 }
 .overlay-1 .box .population .total-students div {
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* flex-flow: row; */
   justify-content: space-between;
 }
 
 .overlay-1 .box .population h2 {
-  /* margin-bottom: -30px; */
   position: relative;
-  /* bottom: -20px; */
-  
   font-size: 15vmin;
   color: #000000;
   font-weight: 700;
@@ -3518,8 +3493,6 @@ main .projects-box .projects-box-section2 table tr td button:hover {
   border-radius: 7px;
   justify-content: space-between;
   padding: 10px;
-  /* align-items: center; */
-  /* align-content: center; */
   min-height: 200px;
   
 }
@@ -3530,3 +3503,4 @@ main .projects-box .projects-box-section2 table tr td button:hover {
   flex-flow: row;
   justify-content: space-between;
 }
+
