@@ -9,6 +9,68 @@
     <title>Dashboard</title>
   </head>
   <body>
+    <div id="container" class="container">
+      <div class="form-con">
+          <form class="add-form" id="signup-form">
+              <div class="box">
+                  <div class="box-title">
+                      <h1>Register New Student</h1>
+                      <!-- <p>Enter new student data <br>Note: all input must be filled</p> -->
+                  </div>
+                  <div class="input-div">
+                      <div>
+                      <label for="firstname">Enter firstname:</label>
+                      <input name="firstname" id="firstname" placeholder="firstname" class="inputs" type="text"/>
+                      </div>
+                      <div>
+                          <label for="lastname">Enter lastname:</label>
+                          <input name="lastname" id="lastname" placeholder="lastname" class="inputs" type="text"/>
+                          </div>
+                          <div>
+                              <label for="age">Enter age:</label>
+                              <input name="age" id="age" placeholder="age" class="inputs" type="number"/>
+                          </div>
+                          <div>
+                              <label for="dateofbirth">Enter date of birth:</label>
+                              <input name="dateofbirth" id="dateofbirth" placeholder="dateofbirth" class="inputs" type="date"/>
+                              </div>
+
+                      
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="input-div">
+                      <div>
+                          <label for="department">Enter age:</label>
+                          <input name="department" id="department" placeholder="department" class="inputs" type="number"/>
+                      </div>
+                      <div>
+                          <label for="class">Enter age:</label>
+                          <input name="age" id="age" placeholder="age" class="inputs" type="number"/>
+                      </div>
+                      <div>
+                          <label for="department">Choose a department:</label>
+
+                          <select name="cars" id="cars" placeholder="Qassim" required>
+                              <option value="science">---Select One</option>
+                              <option value="science">Art</option>
+                            <option value="art">Commercial</option>
+                            <option value="computer">Science</option>
+                          </select>
+                      </div>
+                      
+                  </div>
+                  <div class="btns">
+                      <button class="btn register-btn" id="register-btn" >Register</button>
+                      <button class="btn cancel-btn" id="cancel-btn">Cancel</button>
+                  </div>
+              </div>
+             
+          </form>
+      </div>
+  </div>
+
+
     <div class="page-content index-page">
       <div class="sidebar">
         <div class="brand">
@@ -93,7 +155,7 @@
           <div class="header">
             <i class="fa-solid fa-bars bar-item"></i>
             <div class="search">
-              <input type="search" placeholder="Type A Keyword" />
+              <h1>Students</h1>
             </div>
 
             <div class="profile">
@@ -151,5 +213,6 @@
     </div>
     
     <script src="./js/script.js"></script>
+    <script src="./js/newStudentForm.js"></script>
   </body>
 </html>

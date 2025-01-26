@@ -3506,3 +3506,181 @@ main .projects-box .projects-box-section2 table tr td button:hover {
   justify-content: space-between;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container{
+  position: absolute;
+  z-index: 1000000000000000;
+  display: flex;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.329);
+  width: 100dvw;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+#container .form-con .add-form{
+  max-width: 50dvw;
+  border-radius: 10px;
+  min-width: 50dvw;
+  min-height: 70dvh;
+
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  padding-right: 30px;
+  box-shadow: 0px 0px 30px rgb(195, 195, 195);
+  gap: 7px;
+}
+
+#container .form-con .add-form > *{
+  
+
+}
+#container .form-con .add-form .box{
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ededed; */
+  border-color: black;
+  border-width: 10px;
+  gap: 20px;
+  
+  padding: 20px;
+  /* padding-right: 20px; */
+  justify-content: space-between;
+}
+
+
+#container .form-con .add-form .box .box-title{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  background-color: #f5f5f5;
+  line-height: 160%;
+  padding-left: 20px;
+  padding-top: 20px;
+  flex-direction: column;
+  gap: 15px;    
+}
+#container .form-con .add-form .box .input-div{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+#container .form-con .add-form .box .input-div div{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;   
+}
+#container .form-con .add-form .box .input-div div{
+  display: flex;
+  gap: 5px;   
+} 
+#container .form-con .add-form .box .btns{
+  color: green;
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-rows: auto;
+  /* background-color: #00004c; */
+  gap: 10px;
+}
+#container .form-con .add-form .box .btns > *{
+  grid-row: 1/2;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+#container .form-con .add-form .box .btns .register-btn {
+  grid-row: 1/2;
+  background-color: rgb(23, 180, 3);
+}
+#container .form-con .add-form .box .btns .register-btn ::after {
+  content: "";
+  transform: translate(1.5);
+  grid-row: 1/2;
+  background-color: rgb(105, 228, 89);
+  border-width: 10px;
+}
+#container .form-con .add-form .box .btns .cancel-btn{
+  grid-row: 1/2;
+
+  background-color: rgb(168, 1, 1);
+}
+#container .form-con .add-form .box .input-div div input{
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+#container .form-con .add-form .box .input-div div select{
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 10px;
+}
+#container .form-con .add-form .box .input-div div label{
+  font-size: 2vmin;
+}
+#container .form-con .add-form .box .input-div div input:focus{
+      
+}
+#container .form-con .add-form .box .box-title p{
+  font-size: 2vmin;
+}
+
+
+#container .form-con .add-form .box .box-title h1{
+  font-size: 5vmin;
+}
+
+@media (max-width: 1067px) {
+  /* OVERLAYS  */
+          
+          #container .form-con .add-form{
+              /* max-width: 70dvw; */
+              
+              border-radius: 10px;
+              min-width: 50dvw;
+              min-height: 70dvh;
+              display: flex;
+              background-color: white;
+              flex-direction: column;
+              padding: 20px;
+              padding-right: 30px;
+              box-shadow: 0px 0px 30px rgb(195, 195, 195);
+              gap: 7px;
+          }
+
+          #container .form-con .add-form > *{
+              
+
+          }
+
+  
+}

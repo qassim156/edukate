@@ -1,3 +1,10 @@
+let totalStudents = document.getElementById("total-students");
+let totalClass = document.getElementById("total-class");
+let userRole = document.querySelectorAll("#user-role");
+let adminname =  document.getElementById("admin-name");
+
+
+totalStudents.innerHTML = "120";
 // student - class
 // teacher - class
 // courses - class
@@ -86,12 +93,8 @@ const getTotalStudent = (totalStudent) => {
     return
 };
 const getStudents = async() => {
-    // fetch('/allStudents').then(response => {
-    //     console.log(response);
-    //     return response;
-    // }).catch(err => console.log(err));
 
-      await axios.get('/allStudents').then(response => {
+      await axios.get('/student/all').then(response => {
         console.log(response);
     }).catch(err => console.log(err));
 };
@@ -106,7 +109,7 @@ const setStudent = async() => {
   const password = "" + lastName + "pass";
     
   await axios.post(
-    '/addStudent',
+    '/student/register',
     {
       userid : "ED2025001", password : generatePassword(lastName), firstName : firstName , lastName : lastName, address : "19 oyesile street", 
       phoneNumer : Number("09022795917"), email : "adakoqassim@gmail.com", age : 98, 

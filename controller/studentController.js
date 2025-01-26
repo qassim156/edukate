@@ -11,13 +11,26 @@ class controller {
     this.req = req;
     this.res = res;
   }
-  
+        one = async (req, res, next) => {
+            const userid = req.body.userid;
+            await student.findOne({userid}).then(user =>
+                res.status(200).json({
+                  message: "Student successfully created",
+                  user,
+                })
+              )
+        }
+        all = async (req, res, next) => {
+            const userid = req.body.userid;
+            await student.findOne({userid}).then(data =>
+                res.status(200).json(data))
+        }
+
         register = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
           phoneNumer, email, age, regDate} = req.body;
           console.log("admin is creating student");
-          
-          
+                    
           try {
             await student.insertMany([{
               userid, password, firstName, lastName, address, 

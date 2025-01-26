@@ -85,17 +85,30 @@ router.post('/login', async(req,res) => {
 
 // DataBase Calls
 
-router.get('/allStudents', async(req,res) => {
+router.get('/student/all', async(req,res) => {
     const data = await adminCollection.find(
         {}, {userid: true}).sort({userid: 1});
     console.log(data);
     res.json(data);
 });
-router.get('/student', async(req,res) => {
+router.post('/student/user', async(req,res) => {
     const data = await adminCollection.findOne({userid: req.body.userid});
     console.log(data);
     res.json(data);
 });
+
+router.get('/student/all', async(req,res) => {
+    const data = await adminCollection.find(
+        {}, {userid: true}).sort({userid: 1});
+    console.log(data);
+    res.json(data);
+});
+router.post('/student/user', async(req,res) => {
+    const data = await adminCollection.findOne({userid: req.body.userid});
+    console.log(data);
+    res.json(data);
+});
+
 // student
 router.post('/student/register', mystudent.register);
 router.post('/student/login', mystudent.login);
@@ -108,4 +121,4 @@ router.post('/teacher/login', myteacher.login);
 router.put('/teacher/update', myteacher.update);
 router.delete('/teacher/delete', myteacher.delete);
 
-export default router;
+export default router; 
