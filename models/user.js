@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
     mongoose.connect(
-        'mongodb://127.0.0.1:27017/LoginSignUpTutorial'
+        'mongodb://127.0.0.1:27017/edukate'
     ).then(()=>{
         console.log('DB Connected');
     }).catch(() => {
@@ -9,11 +9,6 @@ import mongoose from 'mongoose';
     });
     const LoginSchema = new mongoose.Schema({
         username:{
-            type: String,
-            required: true,
-            unique:true,
-        },
-        email:{
             type: String,
             required: true,
             unique:true,

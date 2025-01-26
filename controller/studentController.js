@@ -1,19 +1,18 @@
 import express from 'express';
 
-import admin from '../models/admin.js';
 import student from '../models/student.js';
-import teacher from '../models/teachers.js';
 const app = express();
 
 
 app.use(express.json());
+
 class controller {
   constructor(req, res, next) {
     this.req = req;
     this.res = res;
   }
   
-        registerStudent = async (req, res, next) => {
+        register = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
           phoneNumer, email, age, regDate} = req.body;
           console.log("admin is creating student");
@@ -39,7 +38,7 @@ class controller {
           }
         }
 
-        loginStudent = async (req, res, next) => {
+        login = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
           phoneNumer, email, age, regDate} = req.body;
           console.log("admin is creating student");
@@ -67,7 +66,7 @@ class controller {
             
         }
 
-        updateStudent = async (req, res, next) => {
+        update = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
             phoneNumer, email, age, regDate} = req.body;
             console.log("admin is creating student");
@@ -94,7 +93,7 @@ class controller {
               }        
         }
         
-        deleteStudent = async (req, res, next) => {
+        delete = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
             phoneNumer, email, age, regDate} = req.body;
             console.log("admin is creating student");
@@ -120,33 +119,6 @@ class controller {
                 })
               }      
         }
-
-      registerTeacher = async (req, res, next) => {
-        const {userid, password , firstName, lastName, address, 
-          phoneNumer, email, age} = req.body;
-          console.log("admin is creating student");
-          
-          
-          try {
-            
-            await teacher.insertMany([{
-
-              userid, password, firstName, lastName, address, 
-              phoneNumer, email, age
-            
-            }]).then(user =>
-              res.status(200).json({
-                message: "Student successfully created",
-                user,
-              })
-            )
-          } catch (err) {
-            res.status(401).json({
-              message: "User not successful created",
-              error: err.mesage,
-            })
-          }
-  }
 }
 
 

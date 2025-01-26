@@ -1,140 +1,195 @@
-const ctx = document.getElementById('myChart');
+// student - class
+// teacher - class
+// courses - class
+// 
 
-new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['Male Students', 'Female Students'],
-    datasets: [{
-      label: 'Number in Total',
-      data: [1900, 909],
-      borderWidth: 2,
-      backgroundColor: [
-        'rgba(0, 105, 217, 0.39)',
-        'rgba(0, 157, 255, 0.32)'
-      ],
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        data: [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000],
-        beginAtZero: true 
+//** VARIABLES */
+ 
+
+//*  ALL FUNCTION  *******************//
+
+// getStudent - get a particular students
+// getStudents  - get all student
+// setStudent - create new student
+// countData
+
+// getNew
+// getNewTeacher
+// getNewStudent
+/*
+function to generate userid for new teacher
+*/
+
+// getTeacher - get a teacher
+// setTeacher - create new Teacher
+
+// getClasses - get all classes
+// setClasses - add new class
+
+// newMessage
+// deleteMessage
+// generateMeassageId
+
+// getCourses get all courses
+// setCourses create new courses
+
+// newStudentList
+
+const generateUserId = (userRole) => {
+      if(userRole == 0){
+          return;
+      }else if(userRole == 1){
+
+        fetch('/allStudentsId').then(response => {
+          console.log(response);
+          for (var id of response) {
+            
+          }
+          response = "" + response 
+          return response;
+      }).catch(err => console.log(err));
+      
+      }else if(userRole == 2){
+
+        fetch('/allTeacherId').then(response => {
+          console.log(response);
+          return response;
+      }).catch(err => console.log(err));
+
+      }else{
+
       }
-    }
-  }
-});
 
-const ctx2 = document.getElementById('myChart-1');
+        
+      
+      return "" + lastName + "pass";
+};
+const generatePassword = (lastName) => {
+      return "" + lastName + "pass";
+};
 
-new Chart(ctx2, {
-  type: 'doughnut',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Students',
-      data: [12, 19, 33, 5, 92, 93],
-      borderWidth: 5
-    }]
-  },
-  options: {
+
+
+//  Students function  
+
+const getStudent = () => {
+
+};
+const updateStudent = () => {
+
+};
+const getTotalStudent = (totalStudent) => {
+    const jj = 0;
+    for (const obj in totalStudent) {
+        j+=1;  
+    }  
+    return
+};
+const getStudents = async() => {
+    // fetch('/allStudents').then(response => {
+    //     console.log(response);
+    //     return response;
+    // }).catch(err => console.log(err));
+
+      await axios.get('/allStudents').then(response => {
+        console.log(response);
+    }).catch(err => console.log(err));
+};
+getStudents();
+
+
+const setStudent = async() => {
+  const currentTimestamp = new Date();
+  const firstName = 'Qassim';
+  const lastName = 'Qassim';
+  const email = 'Qassim';
+  const password = "" + lastName + "pass";
     
-  }
-});
-
-let overlay = document.querySelector(".overlay-1");
-let getBarItem = document.querySelector(".bar-item");
-let getSideBar = document.querySelector(".sidebar");
-let getXmark = document.querySelector(".xmark");
-let getPageContent = document.querySelector(".page-content");
-let getLoader = document.querySelector(".loader");
-let getToggle = document.querySelectorAll(".toggle");
-let getHeart = document.querySelector(".heart");
-let getSidebarLink = document.querySelectorAll(".sidebar-link");
-let activePage = window.location.pathname;
-let getSideBarStatus = false;
-
-getBarItem.onclick = () => {
-  getSideBar.style = "transform: translateX(0px);width:220px";
-  getSideBar.classList.add("sidebar-active");
-};
-getXmark.onclick = () => {
-  getSideBar.style =
-    "transform: translateX(-220px);width:220px;box-shadow:none;";
-  getSideBarStatus = true;
-  if (getSideBar.classList.contains("sidebar-active")) {
-    getSideBar.classList.remove("sidebar-active");
-  }
-};
-window.addEventListener("resize", (e) => {
-  if (getSideBarStatus === true) {
-    if (e.target.innerWidth > 768) {
-      getSideBar.style = "transform: translateX(0px);width:220px";
-    } else {
-      getSideBar.style =
-        "transform: translateX(-220px);width:220px;box-shadow:none;";
+  await axios.post(
+    '/addStudent',
+    {
+      userid : "ED2025001", password : generatePassword(lastName), firstName : firstName , lastName : lastName, address : "19 oyesile street", 
+      phoneNumer : Number("09022795917"), email : "adakoqassim@gmail.com", age : 98, 
+      regDate: currentTimestamp,
     }
-  }
-});
-window.addEventListener("load", (e) => {
-    overlay.style = "display: none;"
-});
-if (getLoader) {
-  window.addEventListener("load", () => {
-    getLoader.style.display = "none";
-    getPageContent.style.display = "grid";
-    activePage = "index.html";
-    getSidebarLink.forEach((item) => {
-      if (item.href.includes(`${activePage}`)) {
-        item.classList.add("active");
-      } else item.classList.remove("active");
-    });
-  });
+).then(response => {
+    console.log(response);
+}).catch(err => console.log(err));
+};
+setStudent();
+// Teachers
+
+const getTeacher = () => {
+
+};
+const getTeachers = () => {
+
+};
+const setTeacher = () => {
+
+};
+
+//Courses
+
+const getCourse = () => {
+
+};
+const getCourses = () => {
+
+};
+const setCourse = () => {
+
+};
+// Message
+const getMessage = () => {
+
+};
+const getMessages = () => {
+
+};
+const setMessage = () => {
+
+};
+
+const getClass = () => {
+
+};
+const getClasses = () => {
+
+};
+const setClass = () => {
+
+};
+
+const setNewTeacherList = () => {
+
 }
-document.onclick = (e) => {
-  if (getSideBar.classList.contains("sidebar-active")) {
-    if (
-      !e.target.classList.contains("bar-item") &&
-      !e.target.classList.contains("sidebar") &&
-      !e.target.classList.contains("brand") &&
-      !e.target.classList.contains("brand-name")
-    ) {
-      getSideBar.style =
-        "transform: translateX(-220px);width:220px;box-shadow:none;";
-      getSideBar.classList.remove("sidebar-active");
-      getSideBarStatus = true;
-    }
-  }
-};
-window.addEventListener("scroll", () => {
-  if (getSideBar.classList.contains("sidebar-active")) {
-    getSideBar.style =
-      "transform: translateX(-220px);width:220px;box-shadow:none;";
-    getSideBar.classList.remove("sidebar-active");
-  }
-});
-if (getHeart) {
-  getHeart.addEventListener("click", (e) => {
-    if (e.target.classList.contains("fa-regular")) {
-      getHeart.classList.replace("fa-regular", "fa-solid");
-      getHeart.style.color = "red";
-    } else {
-      getHeart.classList.replace("fa-solid", "fa-regular");
-      getHeart.style.color = "#888";
-    }
-  });
+const setNewStudentList = () => {
+  
 }
-getToggle.forEach((item) => {
-  item.addEventListener("click", () => {
-    if (item.classList.contains("left")) {
-      item.classList.remove("left");
-    } else {
-      item.classList.add("left");
-    }
-  });
-});
+const chartDataUpdate = () => {
 
-getSidebarLink.forEach((item) => {
-  if (item.href.includes(`${activePage}`)) {
-    item.classList.add("active");
+}
+
+class Teacher {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
   }
-});
+}
+class Student {
+  constructor(fullname, email, phone, address, 
+    department, level, regDate,  age, userId,  totalCourses,
+    coursesTaken, coursesPassed, coursesFailed, coursesRegistered,
+    role, password, messsages
+    
+
+  ) {
+    this.fullname = fullname;
+    this.year = year;
+  }
+  getStudentName() {
+    return this.fullname;
+  }
+
+}

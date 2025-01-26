@@ -7,13 +7,8 @@ import mongoose from 'mongoose';
     }).catch(() => {
         console.log('Failed to connect')
     });
-    const LoginSchema = new mongoose.Schema({
-        username:{
-            type: String,
-            required: true,
-            unique:true,
-        },
-        email:{
+    const teacherSchema = new mongoose.Schema({
+        userid:{
             type: String,
             required: true,
             unique:true,
@@ -23,5 +18,5 @@ import mongoose from 'mongoose';
             required: true,
         }
     });
-    const teacherCollection = mongoose.model("teacherCollection", LoginSchema);
-    export default teacherCollection;
+    const teacher = mongoose.model("teacherCollection", teacherSchema);
+    export default teacher;

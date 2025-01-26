@@ -18,7 +18,7 @@ import userRoute from './routes/user.js';
 import adminRoute from './routes/admin.js';
 import teacherRoute from './routes/teacher.js';
 import studentRoute from './routes/student.js';
-import login from './routes/login.js';
+import homeRoute from './routes/user.js';
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.use(express.static('./app'));
 app.use('/admin', adminRoute);
 app.use('/teacher', teacherRoute);
 app.use('/student', studentRoute);
-app.use('/', login)
+app.use('/', homeRoute)
 
 
 

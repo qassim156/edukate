@@ -14,41 +14,32 @@ import mongoose from 'mongoose';
             unique:true,
         },
         password:{
-            type: String,
-            required: true,
+            type: String
         },
-        firstname:{
-            type: String,
+        firstName:{
+            type: String
         },
-        lastname:{
-            type: String,
+        lastName:{
+            type: String
+        },
+        address:{
+            type: String
+        },
+        phoneNumber:{
+            type: String
+        },
+        email:{
+            type: String
         },
         age:{
-            type: Number, 
+            type: String
         },
-        studentClass:{
-            type: String,
-        },
-        imgPath:{
-            type: String,
-        },
-        totalCourses:{
-            type: String,
-        },
-        deaprtment:{
-            type: String,
-        },
-        currentYear:{
-            type: Number, 
-        },
-        score:{
-            type: String,
-        },
-        g:{
-            type: String,
-        }
+        regDate:{
+            type: String
+        }               
     });
+    
+    const student = mongoose.model("studentcollections", studentSchema);
 
     
-    const studentCollection = mongoose.model("studentCollection", studentSchema);
-    export default studentCollection;
+    export default student;

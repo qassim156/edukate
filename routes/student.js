@@ -10,7 +10,7 @@ const app = express();
 const router = express.Router();
 
 router.get('/', function (req, res) {
-    res.status(301).sendFile(path.join(__dirname, "../app/admin/html/index.html"));
+
    
 });
 
