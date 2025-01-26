@@ -2,9 +2,25 @@ let totalStudents = document.getElementById("total-students");
 let totalClass = document.getElementById("total-class");
 let userRole = document.querySelectorAll("#user-role");
 let adminname =  document.getElementById("admin-name");
+let totalTeacher =  document.querySelector(".total-teacher");
+let name =  document.querySelector("admin-name");
+let name =  document.querySelector("admin-name");
+let name =  document.querySelector("admin-name");
+let name =  document.querySelector("admin-name");
+let name =  document.querySelector("admin-name");
+let name =  document.querySelector("admin-name");
 
 
-totalStudents.innerHTML = "120";
+const count = (gp) => {
+      let c = 0;  
+      for(x in gp){
+          c+=1;
+      }
+      return c;
+}
+
+
+
 // student - class
 // teacher - class
 // courses - class
@@ -85,17 +101,11 @@ const getStudent = () => {
 const updateStudent = () => {
 
 };
-const getTotalStudent = (totalStudent) => {
-    const jj = 0;
-    for (const obj in totalStudent) {
-        j+=1;  
-    }  
-    return
-};
-const getStudents = async() => {
 
-      await axios.get('/student/all').then(response => {
-        console.log(response);
+const getStudents = async() => {
+       await axios.get('/student/all').then(response => {
+        data = count(response.data);
+        return data;
     }).catch(err => console.log(err));
 };
 getStudents();
@@ -153,7 +163,6 @@ const getMessages = () => {
 const setMessage = () => {
 
 };
-
 const getClass = () => {
 
 };
@@ -163,7 +172,6 @@ const getClasses = () => {
 const setClass = () => {
 
 };
-
 const setNewTeacherList = () => {
 
 }
@@ -174,25 +182,19 @@ const chartDataUpdate = () => {
 
 }
 
-class Teacher {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-}
-class Student {
-  constructor(fullname, email, phone, address, 
-    department, level, regDate,  age, userId,  totalCourses,
-    coursesTaken, coursesPassed, coursesFailed, coursesRegistered,
-    role, password, messsages
-    
 
-  ) {
-    this.fullname = fullname;
-    this.year = year;
-  }
-  getStudentName() {
-    return this.fullname;
-  }
+const totalStudentDom = (text) => {
 
+      totalStudents.innerHTML = text;
 }
+
+
+
+
+
+
+
+
+
+
+totalStudents.innerHTML = updateDom();

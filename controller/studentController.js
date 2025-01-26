@@ -22,8 +22,8 @@ class controller {
         }
         all = async (req, res, next) => {
             const userid = req.body.userid;
-            await student.findOne({userid}).then(data =>
-                res.status(200).json(data))
+            const data = await student.find()
+            res.json(data);
         }
 
         register = async (req, res, next) => {

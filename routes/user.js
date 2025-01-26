@@ -86,8 +86,7 @@ router.post('/login', async(req,res) => {
 // DataBase Calls
 
 router.get('/student/all', async(req,res) => {
-    const data = await adminCollection.find(
-        {}, {userid: true}).sort({userid: 1});
+    const data = await adminCollection.find();
     console.log(data);
     res.json(data);
 });
@@ -97,12 +96,6 @@ router.post('/student/user', async(req,res) => {
     res.json(data);
 });
 
-router.get('/student/all', async(req,res) => {
-    const data = await adminCollection.find(
-        {}, {userid: true}).sort({userid: 1});
-    console.log(data);
-    res.json(data);
-});
 router.post('/student/user', async(req,res) => {
     const data = await adminCollection.findOne({userid: req.body.userid});
     console.log(data);
