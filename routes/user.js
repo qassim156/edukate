@@ -16,8 +16,10 @@ import teacherCollection from '../models/teachers.js';
 //controllers
 import controller from '../controller/mycontroller.js';
 import studentController from '../controller/studentController.js';
+import teacherController from '../controller/teacherController.js';
 
 const mystudent = new studentController();
+const myteacher = new teacherController();
 // const myController = new controller();
 
 const app = express();
@@ -89,15 +91,21 @@ router.get('/allStudents', async(req,res) => {
     console.log(data);
     res.json(data);
 });
-router.get('/Student', async(req,res) => {
+router.get('/student', async(req,res) => {
     const data = await adminCollection.findOne({userid: req.body.userid});
     console.log(data);
     res.json(data);
 });
-//student
-router.post('/Student', mystudent.register);
-router.put('/Student', mystudent.update);
-router.delete('/Student', mystudent.delete);
+// student
+router.post('/student/register', mystudent.register);
+router.post('/student/login', mystudent.login);
+router.put('/student/update', mystudent.update);
+router.delete('/student/delete', mystudent.delete);
 
+// teacher
+router.post('/teacher/register', myteacher.register);
+router.post('/teacher/login', myteacher.login);
+router.put('/teacher/update', myteacher.update);
+router.delete('/teacher/delete', myteacher.delete);
 
 export default router;
