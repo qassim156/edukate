@@ -12,92 +12,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <div id="container" class="container">
-      <div class="form-con">
-          <form class="add-form" id="signup-form">
-              <div class="box">
-                  <div class="box-title">
-                      <h1>Register New Student</h1>
-                      <!-- <p> new student data <br>Note: all input must be filled</p> -->
-                  </div>
-                  <div class="input-div">
-                      <div>
-                      <label for="firstname"> firstname:</label>
-                      <input required name="firstname" id="firstname" placeholder="firstname" class="inputs" type="text"/>
-                      </div>
-                      <div>
-                          <label for="lastname"> lastname:</label>
-                          <input required name="lastname" id="lastname" placeholder="lastname" class="inputs" type="text"/>
-                          </div>
-                          <div>
-                              <label for="age"> Age:</label>
-                              <input required name="age" id="age" placeholder="age" class="inputs" type="number"/>
-                          </div>
-                          <div>
-                              <label for="dateofbirth"> Date of birth:</label>
-                              <input required name="dateofbirth" id="dateofbirth" placeholder="dateofbirth" class="inputs" type="date"/>
-                              </div>
-                              <div>
-                                <label for="email"> student email address:</label>
-                                <input required name="email" id="email" placeholder="example@gmail.com" class="inputs" type="email"/>
-                                </div>
-
-                      
-                  </div>
-              </div>
-              <div class="box">
-                  <div class="input-div">
-
-                    
-
-
-                    <div>
-                      <select required name="gender" id="gender">
-                        <option value="">--- Select gender</option>
-                        <option value="male">Male</option>
-                      <option value="female">female</option>
-                    </select>
-                          <label for="phone"> Phone Number:</label>
-                          <input required name="phone" id="phone" placeholder="098873764" class="inputs" type="number" />
-                      </div>
-                      <div>
-                          <label for="address"> Address:</label>
-                          <input required name="address" id="address" placeholder="address" class="inputs" type="text"/>
-                      </div>
-                      <div>
-                          <label for="department">Choose a department:</label>
-
-                          <select name="department" id="department" required>
-                              <option value="">---Select One</option>
-                              <option value="art">Art</option>
-                            <option value="commercial">Commercial</option>
-                            <option value="science">Science</option>
-                          </select>
-
-                          <label for="year">Choose a year:</label>
-
-                          <select name="year" id="year" required>
-                            <option value="">---Select One</option>
-                            <option value="Year 1">1</option>
-                          <!-- <option value="year 2l">2</option> -->
-                        </select>
-                      </div>
-
-                      <div>
-                        <label for="userid"> userid:</label>
-                        <input required name="userid" id="userid" placeholder="ED2025001" class="inputs" type="text"/>
-                    </div>
-                      
-                  </div>
-                  <div class="btns">
-                      <button class="btn register-btn" id="register-btn" >Register</button>
-                      <button class="btn cancel-btn" id="cancel-btn">Cancel</button>
-                  </div>
-              </div>
-             
-          </form>
-      </div>
-    </div>
+  
 
 
     <div class="page-content index-page">
@@ -113,13 +28,7 @@
               <span>Dashboard</span>
             </a>
           </li>
-          
-          <li>
-            <a href="classes.html" class="sidebar-link">
-              <i class="fa-solid fa-chalkboard"></i>
-              <span>Classes</span>
-            </a>
-          </li>
+
 
           <li>
             <a href="courses.html" class="sidebar-link">
@@ -133,40 +42,8 @@
                         <i class="fa-solid fa-users-line"></i>
                         <span>Students</span>
                       </a>
-                    </li>
-          
-                    <li>
-                      <a href="teachers.html" class="sidebar-link">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>Teachers</span>
-                      </a>
-                    </li>
-          <!-- <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Message</span>
-            </a>
-          </li> -->
-          <li>
-            <a href="notifications.html" class="sidebar-link">
-              <i class="fa-solid fa-bell"></i>
-              <span>Notification</span>
-            </a>
-          </li>
-          <li>
-            <a href="examination.html" class="sidebar-link">
-              <i class="fa-solid fa-marker"></i>
-              <span>Examination</span>
-              </a>
-          </li>
-          <li>
-            <a href="profile.html">
-              <i class="fa-solid fa-address-card"></i>
-                <span>Profile</span>
-            </a>
-        </li>
-        
-        <li>
+                    </li>  
+        <li class="logout">
             <a href="setting.html">
               <i class="fa-solid fa-toolbox"></i>
                 <span>Settings</span>
@@ -183,14 +60,14 @@
       <main>
           <div class="header">
             <i class="fa-solid fa-bars bar-item"></i>
-            <div class="search">
-              <h1>Students</h1>
-            </div>
+            <div class="title">
+              <h1>All Users</h1>
+            </div> 
 
             <div class="profile">
               <div class="user">
-                  <h4>John smilga</h4>
-                  <p>Student</p>
+                  <h4>Admin</h4>
+                  <p>admin</p>
               </div>
               <div class="user-img"><a href="profile.html">
                 <img src="./images/avatar.png" />
@@ -204,32 +81,27 @@
               <div class="projects-box">
                 <div class="box-section1">
                   <div class="box-title">
-                    <h2>Students</h2>
-                    <span class="add-student-btn"><i class="fa-solid fa-plus"></i></span>
+                    <h2>List of all student on database</h2><a href="addstudent.html"><button id="add-btn"><i class="fa-solid fa-plus"></i>  Add Student</button></a>
+                    
                   </div>
                 </div>
                 <div class="projects-box-section2">
-                  <table>
+                  <table id="student-table">
                     <thead>
                       <tr>
                         <td>Name</td>
-                        <td>Classes</td>
-                        <td>Department</td>
                         <td>Userid</td>
-                        <td>Started Courses</td>
-                        <td>Ending Course</td>
-                        <td>Edit / Delete</td>
+                        <td>username</td>
+                        <td>gender</td>
+                        <td>address</td>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="tr">
-                        <td>Qassim Adako</td>
-                        <td>Year 2</td>
-                        <td>Science</td>
-                        <td>ED20240001</td>
-                        <td>Sep 2024</td>
-                        <td>Sep 2027</td>
-                        <td><button>View Details</button></td>
+                        <td>Admin</td>
+                        <td>Admin</td>
+                      <td>...............</td>
+                        <!-- <td><button>View Details</button></td> -->
                       </tr>
                       
                     </tbody>
@@ -243,5 +115,6 @@
     
     <script src="./js/script.js"></script>
     <script src="./js/newStudentForm.js"></script>
+    <script src="./js/student.js"></script>
   </body>
 </html>

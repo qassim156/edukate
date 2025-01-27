@@ -11,15 +11,15 @@ import cookieParser from 'cookie-parser'
 // Model
 import adminCollection from '../models/admin.js';
 import studentCollection from '../models/student.js';
-import teacherCollection from '../models/teachers.js';
+// import teacherCollection from '../models/teachers.js';
 
 //controllers
 import controller from '../controller/mycontroller.js';
 import studentController from '../controller/studentController.js';
-import teacherController from '../controller/teacherController.js';
+import courseController from '../controller/courseController.js';
 
 const mystudent = new studentController();
-const myteacher = new teacherController();
+const mycourse = new courseController();
 // const myController = new controller();
 
 const app = express();
@@ -81,16 +81,8 @@ router.get('/admin/home', async(req,res) => {
 
 // DataBase Calls
 
-router.get('/student/all', async(req,res) => {
-    const data = await adminCollection.find();
-    console.log(data);
-    res.json(data);
-});
-router.post('/student/user', async(req,res) => {
-    const data = await adminCollection.findOne({userid: req.body.userid});
-    console.log(data);
-    res.json(data);
-});
+router.get('/student/all', mystudent.all);
+router.post('/student/user', mystudent.one);
 
 // student
 router.post('/student/register', mystudent.register);
@@ -99,9 +91,9 @@ router.put('/student/update', mystudent.update);
 router.delete('/student/delete', mystudent.delete);
 
 // teacher
-router.post('/teacher/register', myteacher.register);
-router.post('/teacher/login', myteacher.login);
-router.put('/teacher/update', myteacher.update);
-router.delete('/teacher/delete', myteacher.delete);
+// router.post('/course/create', mycourse.create);
+router.get('/course/find/:id', mycourse.one);
+router.put('/course/update', mycourse.update);
+router.get('/course/all', mycourse.all);
 
 export default router; 

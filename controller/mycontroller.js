@@ -2,7 +2,7 @@ import express from 'express';
 
 import admin from '../models/admin.js';
 import student from '../models/student.js';
-import teacher from '../models/teachers.js';
+// import teacher from '../models/teachers.js';
 const app = express();
 
 

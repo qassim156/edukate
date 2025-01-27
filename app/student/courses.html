@@ -23,59 +23,22 @@
             </a>
           </li>
 
-          
+
           <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-chalkboard"></i>
-              <span>Classes</span>
-            </a>
-          </li>
-          
-          <li>
-            <a href="index.html" class="sidebar-link">
+            <a href="courses.html" class="sidebar-link">
               <i class="fa-solid fa-folder-open"></i>
               <span>Courses / Subjects</span>
             </a>
           </li>
-          <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-users-line"></i>
-              <span>Students</span>
-            </a>
-          </li>
-          <!-- <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Message</span>
-            </a>
-          </li> -->
-          <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-bell"></i>
-              <span>Notification</span>
-            </a>
-          </li>
-          <li>
-            <a href="index.html" class="sidebar-link">
-              <i class="fa-solid fa-marker"></i>
-              <span>Examination</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-address-card"></i>
-                <span>Profile</span>
-            </a>
-        </li>
-        
-        <li>
-            <a href="#">
+          
+        <li class="logout">
+            <a href="setting.html">
               <i class="fa-solid fa-toolbox"></i>
                 <span>Settings</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="">
               <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Logout</span>
             </a>
@@ -85,14 +48,14 @@
       <main>
           <div class="header">
             <i class="fa-solid fa-bars bar-item"></i>
-            <div class="search">
-              <input type="search" placeholder="Type A Keyword" />
-            </div>
+            <div class="title">
+              <h1>My Courses</h1>
+            </div> 
 
             <div class="profile">
               <div class="user">
-                  <h4>John smilga</h4>
-                  <p>Teacher</p>
+                  <h4>Admin</h4>
+                  <p>Student</p>
               </div>
               <div class="user-img"><a href="profile.html">
                 <img src="./images/avatar.png" />
@@ -100,9 +63,16 @@
               </div>
           </div>
           </div>
+          <div class="main-content">
+                          <a href="addCourses.html"><button id="add-btn">Add Course</button></a>
+          
+            <div class="courses-boxes">
+                           
+          </div>
     </main>
     </div>
     
     <script src="./js/script.js"></script>
+    <script src="./js/courses.js"></script>
   </body>
 </html>

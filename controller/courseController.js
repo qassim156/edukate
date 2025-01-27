@@ -1,6 +1,6 @@
 import express from 'express';
 
-import teacher from '../models/teachers.js';
+import courses from '../models/courses.js';
 const app = express();
 
 
@@ -13,20 +13,21 @@ class controller {
   }
 
             one = async (req, res, next) => {
-                const userid = req.body.userid;
+                const  { id } = req.params;
 
-                await teacher.findOne({userid}).then(user =>
+                await courses.findOne({topicid : id}).then(course =>
                     res.status(200).json({
-                    message: "Student successfully created",
-                    user,
+                    message: "Course Found",
+                    course,
                     })
                 )
             }
             all = async (req, res, next) => {
-                const userid = req.body.userid;
-                
-                await teacher.findOne({userid}).then(data =>
-                    res.status(200).json(data))
+                                
+                await courses.find().then(data => {
+                  res.status(200).json(data);
+                  
+                });
             }
             
         register = async (req, res, next) => {
@@ -55,34 +56,6 @@ class controller {
           }
         }
 
-        login = async (req, res, next) => {
-          const {userid, password , firstName, lastName, address, 
-          phoneNumer, email, age, regDate} = req.body;
-          console.log("admin is creating teacher");
-
-            try {
-              const user = await teacher.findOne({ 
-                userid, password });
-              if (!user) {
-                res.status(401).json({
-                  message: "Login not successful",
-                  error: "User not found",
-                })
-              } else {
-                res.status(200).json({
-                  message: "Login successful",
-                  user,
-                })
-              }
-            } catch (error) {
-              res.status(400).json({
-                message: "An error occurred",
-                error: error.message,
-              })
-            }
-            
-        }
-
         update = async (req, res, next) => {
           const {userid, password , firstName, lastName, address, 
             phoneNumer, email, age, regDate} = req.body;
@@ -99,7 +72,7 @@ class controller {
                 } else {
                   res.status(200).json({
                     message: "Login successful",
-                    user,
+                    user : user
                   })
                 }
               } catch (error) {
@@ -137,6 +110,4 @@ class controller {
               }      
         }
 }
-
-
 export default controller;

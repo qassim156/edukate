@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/newStudentForm.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add student</title>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/7e474f45d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>>
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="form-con">
+            <form class="add-form" id="signup-form">
+                <div class="box">
+                    <div class="box-title">
+                        <h1>Register New Student</h1>
+                        <!-- <p> new student data <br>Note: all input must be filled</p> -->
+                    </div>
+                    <div class="input-div">
+                        <div>
+                        <label for="firstname"> firstname:</label>
+                        <input required name="firstname" id="firstname" placeholder="firstname" class="inputs" type="text"/>
+                        </div>
+                        <div>
+                            <label for="lastname"> lastname:</label>
+                            <input required name="lastname" id="lastname" placeholder="lastname" class="inputs" type="text"/>
+                            </div>
+                            <div>
+                                <label for="age"> Age:</label>
+                                <input required name="age" id="age" placeholder="age" class="inputs" type="number"/>
+                            </div>
+                            <div>
+                                <label for="dateofbirth"> Date of birth:</label>
+                                <input required name="dateofbirth" id="dateofbirth" placeholder="dateofbirth" class="inputs" type="date"/>
+                                </div>
+                                <div>
+                                  <label for="email"> student email address:</label>
+                                  <input required name="email" id="email" placeholder="example@gmail.com" class="inputs" type="email"/>
+                                  </div>
+  
+                        
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="input-div">  
+                      <div>
+                        <select required name="gender" id="gender">
+                          <option value="">--- Select gender</option>
+                          <option value="male">Male</option>
+                        <option value="female">female</option>
+                      </select>
+                            <label for="phone"> Phone Number:</label>
+                            <input required name="phone" id="phone" placeholder="098873764" class="inputs" type="number" />
+                        </div>
+                        <div>
+                            <label for="address"> Address:</label>
+                            <input required name="address" id="address" placeholder="address" class="inputs" type="text"/>
+                        </div>
+                          
+                        <div>
+                          <label for="userid"> userid:</label>
+                          <input required name="userid" id="userid" placeholder="ED2025001" class="inputs" type="text"/>
+                      </div>
+                        
+                    </div>
+                    <div class="btns">
+                        <button class="btn register-btn" id="register-btn" >Register</button>
+                        <button class="btn cancel-btn" id="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+      </div>
+      <script src="./js/addstudent.js"></script>
+      <!-- <script src="./js/student.js"></script> -->
+      <script src="./js/script.js"></script>
+</body>
+</html>

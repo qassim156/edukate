@@ -13,30 +13,27 @@ class controller {
   }
         one = async (req, res, next) => {
             const userid = req.body.userid;
-            await student.findOne({userid}).then(user =>
+            const user = await student.findOne({userid}).then(user =>
                 res.status(200).json({
-                  message: "Student successfully created",
-                  user,
+                  message: "User is available", user,
                 })
               )
         }
         all = async (req, res, next) => {
-            const userid = req.body.userid;
             const data = await student.find()
             res.json(data);
         }
         register = async (req, res, next) => {
           let  {
             userid , password, firstname , lastname, age, dob, email, 
-            gender, phone , address, department, year, regDate
+            gender, phone , address, department
           } = req.body;
-          userid = 'ED2025004';
-          password = '1234';
-          console.log("admin is creating student");
-                    
+
+          console.log("admin is creating student");          
           try {
             await student.insertMany([{
-              userid , password
+              userid , password, firstname , lastname, age, dob, email, 
+              gender, phone , address, department
             }]).then(user =>
               res.status(200).json({
                 message: "Student successfully created",
@@ -50,10 +47,6 @@ class controller {
               error: err.mesage,
             })
           }
-          await student.findOne({userid}).updateOne(
-            { $set: {firstname: "Mickey", address: "Canyon 123" } }
-          ).then(user =>
-            console.log(user))
         }
 
         login = async (req, res, next) => {

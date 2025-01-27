@@ -3513,8 +3513,20 @@ main .projects-box .projects-box-section2 table tr td button:hover {
 
 
 
-
-
+#add-btn{
+  width: 130px;
+  height: 40px;
+  background-color: #024dae;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: 800;
+  padding: auto;
+  margin: 10px;
+}
+#add-btn i{
+  color: white;
+}
 
 
 

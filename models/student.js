@@ -15,7 +15,35 @@ import mongoose from 'mongoose';
         },
         password:{
             type: String
-        }            
+        },
+        firstname:{
+            type: String
+        },
+        lastname:{
+            type: String
+        },
+        age:{
+            type: String
+        },
+        dob:{
+            type: String
+        },
+        emaul:{
+            type: String
+        },
+        gender:{
+            type: String
+        },
+        phone:{
+            type: String
+        },
+        address:{
+            type: String
+        },
+        department:{
+            type: String
+        }
+                 
     });
     
     const student = mongoose.model("studentcollections", studentSchema);
