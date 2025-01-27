@@ -55,6 +55,9 @@ let getSidebarLink = document.querySelectorAll(".sidebar-link");
 let activePage = window.location.pathname;
 let getSideBarStatus = false;
 
+
+
+
 getBarItem.onclick = () => {
   getSideBar.style = "transform: translateX(0px);width:220px";
   getSideBar.classList.add("sidebar-active");

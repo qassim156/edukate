@@ -3,12 +3,7 @@ let totalClass = document.getElementById("total-class");
 let userRole = document.querySelectorAll("#user-role");
 let adminname =  document.getElementById("admin-name");
 let totalTeacher =  document.querySelector(".total-teacher");
-let name =  document.querySelector("admin-name");
-let name =  document.querySelector("admin-name");
-let name =  document.querySelector("admin-name");
-let name =  document.querySelector("admin-name");
-let name =  document.querySelector("admin-name");
-let name =  document.querySelector("admin-name");
+
 
 
 const count = (gp) => {
@@ -31,14 +26,6 @@ const count = (gp) => {
 
 //*  ALL FUNCTION  *******************//
 
-// getStudent - get a particular students
-// getStudents  - get all student
-// setStudent - create new student
-// countData
-
-// getNew
-// getNewTeacher
-// getNewStudent
 /*
 function to generate userid for new teacher
 */
@@ -105,85 +92,18 @@ const updateStudent = () => {
 const getStudents = async() => {
        await axios.get('/student/all').then(response => {
         data = count(response.data);
-        return data;
+        totalStudentDom(data);
     }).catch(err => console.log(err));
 };
-getStudents();
-
-
-const setStudent = async() => {
-  const currentTimestamp = new Date();
-  const firstName = 'Qassim';
-  const lastName = 'Qassim';
-  const email = 'Qassim';
-  const password = "" + lastName + "pass";
-    
-  await axios.post(
-    '/student/register',
-    {
-      userid : "ED2025001", password : generatePassword(lastName), firstName : firstName , lastName : lastName, address : "19 oyesile street", 
-      phoneNumer : Number("09022795917"), email : "adakoqassim@gmail.com", age : 98, 
-      regDate: currentTimestamp,
-    }
-).then(response => {
-    console.log(response);
-}).catch(err => console.log(err));
-};
-setStudent();
-// Teachers
-
-const getTeacher = () => {
-
-};
-const getTeachers = () => {
-
-};
-const setTeacher = () => {
-
-};
-
-//Courses
-
-const getCourse = () => {
-
-};
-const getCourses = () => {
-
-};
-const setCourse = () => {
-
-};
-// Message
-const getMessage = () => {
-
-};
-const getMessages = () => {
-
-};
-const setMessage = () => {
-
-};
-const getClass = () => {
-
-};
-const getClasses = () => {
-
-};
-const setClass = () => {
-
-};
-const setNewTeacherList = () => {
-
-}
-const setNewStudentList = () => {
-  
-}
-const chartDataUpdate = () => {
-
-}
+// getStudents();
 
 
 const totalStudentDom = (text) => {
+  let totalStudents = document.getElementById("total-students");
+let totalClass = document.getElementById("total-class");
+let userRole = document.querySelectorAll("#user-role");
+let adminname =  document.getElementById("admin-name");
+let totalTeacher =  document.querySelector(".total-teacher");
 
       totalStudents.innerHTML = text;
 }
@@ -192,9 +112,4 @@ const totalStudentDom = (text) => {
 
 
 
-
-
-
-
-
-totalStudents.innerHTML = updateDom();
+// totalStudents.innerHTML = updateDom();

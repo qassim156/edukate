@@ -3524,7 +3524,7 @@ main .projects-box .projects-box-section2 table tr td button:hover {
 #container{
   position: absolute;
   z-index: 1000000000000000;
-  display: flex;
+  display: none;
   padding: 50px;
   background-color: rgba(0, 0, 0, 0.329);
   width: 100dvw;

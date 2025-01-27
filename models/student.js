@@ -15,28 +15,7 @@ import mongoose from 'mongoose';
         },
         password:{
             type: String
-        },
-        firstName:{
-            type: String
-        },
-        lastName:{
-            type: String
-        },
-        address:{
-            type: String
-        },
-        phoneNumber:{
-            type: String
-        },
-        email:{
-            type: String
-        },
-        age:{
-            type: String
-        },
-        regDate:{
-            type: String
-        }               
+        }            
     });
     
     const student = mongoose.model("studentcollections", studentSchema);

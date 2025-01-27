@@ -35,15 +35,10 @@ function checkUserRole(userid){
 
             return 0;
 
-        }else if(userid.substring(0, 2) === 'TD'){
-
-            console.log("user is teacher");
-            return 1;
-
         }else if(userid.substring(0, 2) === 'ED'){ 
 
             console.log("user is student");
-            return 2;
+            return 1;
 
         }else{
             console.log("user is not available");
@@ -55,32 +50,33 @@ router.post('/login', async(req,res) => {
         console.log(req.body);
         const user = checkUserRole(req.body.userid); 
         console.log(user);
-
+        var password = 'admin';
         if(user == 0){
-            const data = await adminCollection.findOne({userid: req.body.userid});
+            
 
-            if(data.password === req.body.password){
-                console.log(data);
-                res.redirect('/admin');
+            if(password === req.body.password){
+                
+                res.json({isAdmin: true});
             }else{
                 res.redirect("/");
             }          
 
         }else if(user == 1){
-            const data = await teacherCollection.findOne({userid: req.body.userid});
-
-            console.log(data);
-            res.redirect('/teacher');
-
-        }else if(user == 2){
             const data = await studentCollection.findOne({userid: req.body.userid});
-
+            if(data.password === req.body.password){
+                
+                res.json({isAdmin: false});
+            }else{
+                res.redirect("/");
+            }
             console.log(data);
-            res.redirect('/student');
-
-        }else{
+        } else{
             
         }
+});
+
+router.get('/admin/home', async(req,res) => {
+    res.redirect("/admin");
 });
 
 // DataBase Calls
@@ -90,12 +86,6 @@ router.get('/student/all', async(req,res) => {
     console.log(data);
     res.json(data);
 });
-router.post('/student/user', async(req,res) => {
-    const data = await adminCollection.findOne({userid: req.body.userid});
-    console.log(data);
-    res.json(data);
-});
-
 router.post('/student/user', async(req,res) => {
     const data = await adminCollection.findOne({userid: req.body.userid});
     console.log(data);

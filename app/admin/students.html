@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/7e474f45d2.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
@@ -15,49 +18,75 @@
               <div class="box">
                   <div class="box-title">
                       <h1>Register New Student</h1>
-                      <!-- <p>Enter new student data <br>Note: all input must be filled</p> -->
+                      <!-- <p> new student data <br>Note: all input must be filled</p> -->
                   </div>
                   <div class="input-div">
                       <div>
-                      <label for="firstname">Enter firstname:</label>
-                      <input name="firstname" id="firstname" placeholder="firstname" class="inputs" type="text"/>
+                      <label for="firstname"> firstname:</label>
+                      <input required name="firstname" id="firstname" placeholder="firstname" class="inputs" type="text"/>
                       </div>
                       <div>
-                          <label for="lastname">Enter lastname:</label>
-                          <input name="lastname" id="lastname" placeholder="lastname" class="inputs" type="text"/>
+                          <label for="lastname"> lastname:</label>
+                          <input required name="lastname" id="lastname" placeholder="lastname" class="inputs" type="text"/>
                           </div>
                           <div>
-                              <label for="age">Enter age:</label>
-                              <input name="age" id="age" placeholder="age" class="inputs" type="number"/>
+                              <label for="age"> Age:</label>
+                              <input required name="age" id="age" placeholder="age" class="inputs" type="number"/>
                           </div>
                           <div>
-                              <label for="dateofbirth">Enter date of birth:</label>
-                              <input name="dateofbirth" id="dateofbirth" placeholder="dateofbirth" class="inputs" type="date"/>
+                              <label for="dateofbirth"> Date of birth:</label>
+                              <input required name="dateofbirth" id="dateofbirth" placeholder="dateofbirth" class="inputs" type="date"/>
                               </div>
+                              <div>
+                                <label for="email"> student email address:</label>
+                                <input required name="email" id="email" placeholder="example@gmail.com" class="inputs" type="email"/>
+                                </div>
 
                       
                   </div>
               </div>
               <div class="box">
                   <div class="input-div">
-                      <div>
-                          <label for="department">Enter age:</label>
-                          <input name="department" id="department" placeholder="department" class="inputs" type="number"/>
+
+                    
+
+
+                    <div>
+                      <select required name="gender" id="gender">
+                        <option value="">--- Select gender</option>
+                        <option value="male">Male</option>
+                      <option value="female">female</option>
+                    </select>
+                          <label for="phone"> Phone Number:</label>
+                          <input required name="phone" id="phone" placeholder="098873764" class="inputs" type="number" />
                       </div>
                       <div>
-                          <label for="class">Enter age:</label>
-                          <input name="age" id="age" placeholder="age" class="inputs" type="number"/>
+                          <label for="address"> Address:</label>
+                          <input required name="address" id="address" placeholder="address" class="inputs" type="text"/>
                       </div>
                       <div>
                           <label for="department">Choose a department:</label>
 
-                          <select name="cars" id="cars" placeholder="Qassim" required>
-                              <option value="science">---Select One</option>
-                              <option value="science">Art</option>
-                            <option value="art">Commercial</option>
-                            <option value="computer">Science</option>
+                          <select name="department" id="department" required>
+                              <option value="">---Select One</option>
+                              <option value="art">Art</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="science">Science</option>
                           </select>
+
+                          <label for="year">Choose a year:</label>
+
+                          <select name="year" id="year" required>
+                            <option value="">---Select One</option>
+                            <option value="Year 1">1</option>
+                          <!-- <option value="year 2l">2</option> -->
+                        </select>
                       </div>
+
+                      <div>
+                        <label for="userid"> userid:</label>
+                        <input required name="userid" id="userid" placeholder="ED2025001" class="inputs" type="text"/>
+                    </div>
                       
                   </div>
                   <div class="btns">
@@ -68,7 +97,7 @@
              
           </form>
       </div>
-  </div>
+    </div>
 
 
     <div class="page-content index-page">
@@ -176,7 +205,7 @@
                 <div class="box-section1">
                   <div class="box-title">
                     <h2>Students</h2>
-                    <span><i class="fa-solid fa-plus"></i></span>
+                    <span class="add-student-btn"><i class="fa-solid fa-plus"></i></span>
                   </div>
                 </div>
                 <div class="projects-box-section2">
@@ -193,7 +222,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr class="tr">
                         <td>Qassim Adako</td>
                         <td>Year 2</td>
                         <td>Science</td>
