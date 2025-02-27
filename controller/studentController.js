@@ -45,7 +45,7 @@ class controller {
             res.status(401).json({
               message: "User not successful created",
               error: err.mesage,
-            })
+            })  
           }
         }
 

@@ -18,18 +18,51 @@ const setNewStudent = async(e) =>{
         var password = "" + lastname + "pass"
         var userid = document.getElementById("userid").value;
         var isDone = false;
-         await axios.post(
-            '/student/register',
-            {
-              userid , password, firstname , lastname, age, dob, email, 
-              gender, phone , address
-            }
-        ).then(response => {
-            console.log(response);
-            isDone = true;
-        }).catch(err => console.log(err));
+
+
+        try{
+            const url = '/student/register';
+
+            const jsonData = JSON.stringify({
+                userid , password, firstname , lastname, age, dob, email, 
+                gender, phone , address
+              }
+            ); 
             
-        // closeNewStudentForm(e, isDone);
+            const headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            
+            fetch(url, {
+            
+              method: 'POST', 
+              headers: headers,
+              body: jsonData
+            
+            }).then(response => {
+            
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              console.log(response);
+                        isDone = true;
+                        closeNewStudentForm(e, isDone);
+              return response.json();
+            
+            }).then(responseData => {
+            
+              console.log('Todo created successfully:', responseData);  
+            
+            }).catch(error => {
+            
+              console.error('Error:', error);
+              
+            });
+
+        }catch{
+
+        }
+
+        
     
 }
 

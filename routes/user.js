@@ -82,6 +82,7 @@ router.get('/admin/home', async(req,res) => {
 // DataBase Calls
 
 router.get('/student/all', mystudent.all);
+router.post('/student/all', mystudent.all);
 router.post('/student/user', mystudent.one);
 
 // student
@@ -89,7 +90,7 @@ router.post('/student/register', mystudent.register);
 router.post('/student/login', mystudent.login);
 router.put('/student/update', mystudent.update);
 router.delete('/student/delete', mystudent.delete);
-
+ 
 // teacher
 // router.post('/course/create', mycourse.create);
 router.get('/course/find/:id', mycourse.one);
