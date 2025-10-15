@@ -53,14 +53,19 @@ router.post('/login', async(req,res) => {
         var password = 'admin';
         if(user == 0){
             
+            try{
 
-            if(password === req.body.password){
-                
-                res.json({isAdmin: true});
-            }else{
-                res.redirect("/");
-            }          
+                        if(password === req.body.password){
+                            
+                            res.json({isAdmin: true});
+                        }else{
+                            res.redirect("/");
+                        }          
 
+            }catch{
+
+            }
+                  
         }else if(user == 1){
             const data = await studentCollection.findOne({userid: req.body.userid});
             if(data.password === req.body.password){
